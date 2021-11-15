@@ -1,0 +1,97 @@
+# depslib dependency file v1.0
+1575073800 source:/home/josemar/onedrive/projects/basecode/kbhit.c
+	"kbhit.h"
+
+1586460056 /home/josemar/onedrive/projects/basecode/kbhit.h
+	<termios.h>
+	<stdio.h>
+	<stdio_ext.h>
+	<sys/select.h>
+	<sys/ioctl.h>
+	<unistd.h>
+	<dirent.h>
+	<stdbool.h>
+
+1570227773 source:/home/josemar/onedrive/projects/basecode/cdfunc.c
+	"cdfunc.h"
+
+1569973399 /home/josemar/onedrive/projects/basecode/cdfunc.h
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	<fcntl.h>
+	<unistd.h>
+	<errno.h>
+	<sys/stat.h>
+	<sys/mman.h>
+	<sys/ioctl.h>
+	<dirent.h>
+	<limits.h>
+	<stdbool.h>
+	<linux/videodev2.h>
+
+1572043474 source:/home/josemar/onedrive/projects/basecode/icap .c
+	<getopt.h>
+	"v4l2misc.h"
+
+1586478406 /home/josemar/onedrive/projects/basecode/v4l2misc.h
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<assert.h>
+	<fcntl.h>
+	<unistd.h>
+	<errno.h>
+	<sys/stat.h>
+	<sys/mman.h>
+	<sys/ioctl.h>
+	<dirent.h>
+	<limits.h>
+	<stdbool.h>
+	<linux/videodev2.h>
+
+1591837333 source:/home/josemar/onedrive/projects/basecode/v4l2misc.c
+	"v4l2misc.h"
+	"kbhit.h"
+	<ctype.h>
+	<stdlib.h>
+	<cstdio>
+	<unistd.h>
+
+1634089266 source:/media/josemar/DEV/PROJECTS/kbhit/kbhit.c
+	"kbhit.h"
+
+1634089253 /media/josemar/DEV/PROJECTS/kbhit/kbhit.h
+	<termios.h>
+	<stdio.h>
+	<stdio_ext.h>
+	<sys/select.h>
+	<sys/ioctl.h>
+	<unistd.h>
+	<dirent.h>
+	<stdbool.h>
+
+1636834223 source:/media/josemar/DEV/PROJECTS/v4l2misc/v4l2misc.c
+	"v4l2misc.h"
+	"kbhit.h"
+	<ctype.h>
+	<stdlib.h>
+	<cstdio>
+	<unistd.h>
+
+1636737655 /media/josemar/DEV/PROJECTS/v4l2misc/v4l2misc.h
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<assert.h>
+	<fcntl.h>
+	<unistd.h>
+	<errno.h>
+	<sys/stat.h>
+	<sys/mman.h>
+	<sys/ioctl.h>
+	<dirent.h>
+	<limits.h>
+	<stdbool.h>
+	<linux/videodev2.h>
+
