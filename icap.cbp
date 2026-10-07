@@ -36,6 +36,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Linker>
+			<Add library="jpeg" />
+		</Linker>
 		<Unit filename="../kbhit/kbhit.c">
 			<Option compilerVar="CC" />
 		</Unit>

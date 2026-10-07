@@ -4,7 +4,17 @@
 	<ActiveTarget name="Debug" />
 	<File name="icap.c" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="0" topLine="0" />
+			<Cursor1 position="4625" topLine="165" />
+		</Cursor>
+	</File>
+	<File name="../v4l2misc/v4l2misc.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="44332" topLine="1384" />
+		</Cursor>
+	</File>
+	<File name="../v4l2misc/v4l2misc.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3835" topLine="122" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

@@ -1,16 +1,14 @@
 /*
- *  V4L2 video capture My tests
- *
- *	Nome: Josemar Simão
- */
-
-/*
  *  V4L2 video capture example
+ *
+ *  Nome: Josemar Simão
+ *  email: josemars@ifes.edu.br
  *
  *  This program can be used and distributed without restrictions.
  *
- *      This program is provided with the V4L2 API
- * see http://linuxtv.org/docs.php for more information
+ *  This program is provided with the V4L2 API
+ *  see http://linuxtv.org/docs.php for more information
+ *
  */
 
 #include <getopt.h>             /// getopt_long()
@@ -23,7 +21,9 @@
 
 static int out_buf = 0;
 static int clist = 0;
+#define LEGACY_PROCESS 0
 
+#if(LEGACY_PROCESS == 1)
 void process_image(const void *p, int isize) {
 
     if (out_buf)
@@ -31,50 +31,29 @@ void process_image(const void *p, int isize) {
 
     fflush(stderr);
 
-
-        /// Display the resulting frame
-        /// yuv_to_rgb(p, isize, h, w);
-//        Mat yuvim(h, w, CV_8UC2, (void*)p);
-//        Mat frame(h, w, CV_8UC3, (void*)v);
-
-        ///cvtColor(yuvim,frame,CV_YUV2BGR);
-
-
-//        Mat gray, edge;
-
-
-
-
-        //fprintf(stderr, ".");
-
-
-//        cvtColor(frame, gray, COLOR_BGR2GRAY);
-//        Canny(gray, edge, 50, 200);
-
-//        vector<Vec4i> linesP; // will hold the results of the detection
-//        HoughLinesP(edge, linesP, 1, CV_PI/180, 50, 50, 10 ); // runs the actual detection
-        // Draw the lines
-//        for( size_t i = 0; i < linesP.size(); i++ )
-//        {
-//            Vec4i l = linesP[i];
-//            line( frame, Point(l[0], l[1]), Point(l[2], l[3]), Scalar(0,0,255), 3, LINE_AA);
-//        }
-
-
-
-
-//        imshow( "Frame", frame );
-//        char cesc = (char)waitKey(1);
-//        if( cesc == 27 )
-//            exit(0);
-
     asciiart(p,isize,h,w);
 
     fflush(stdout);
 
 }
+#else
+void process_image(const void *p, int isize) {
 
+    // Converte qualquer formato de hardware para Tons de Cinza 8-bit padrão
+    unsigned char* standardized_gray_data = convert_to_grayscale((unsigned char*)p, isize);
 
+    if (standardized_gray_data) {
+
+        // O asciiart agora é universal: só aceita buffers contíguos de brilho puro
+        asciiart(standardized_gray_data, h * w, h, w);
+
+        // Libera a memória alocada dinamicamente pelo conversor correspondente
+        free(standardized_gray_data);
+    }
+
+    fflush(stdout);
+}
+#endif
 
 /* Sequencia:
         1 - Utilizar ( struct v4l2_requestbuffers / VIDIOC_REQBUFS ) para requisitar uma quantidade de buffers
