@@ -46,6 +46,26 @@
 		<Unit filename="../v4l2misc/v4l2misc.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="../v4l2misc/v4l2core.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../v4l2misc/v4l2core.h" />
+		<Unit filename="../v4l2misc/v4l2ctl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../v4l2misc/v4l2ctl.h" />
+		<Unit filename="../v4l2misc/v4l2enum.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../v4l2misc/v4l2enum.h" />
+		<Unit filename="../v4l2misc/v4l2term.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../v4l2misc/v4l2term.h" />
+		<Unit filename="../v4l2misc/v4l2gray.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../v4l2misc/v4l2gray.h" />
 		<Unit filename="../v4l2misc/v4l2misc.h" />
 		<Unit filename="icap.c">
 			<Option compilerVar="CC" />
